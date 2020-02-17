@@ -22,7 +22,7 @@ export class ElementsTable {
         <tbody>
           {this.items.map((item) =>
             <tr>
-              <td>{item['item']}</td>
+              <td>{item['title']}</td>
               <td>{item['icon']}</td>
               <td>{item['url']}</td>
             </tr>

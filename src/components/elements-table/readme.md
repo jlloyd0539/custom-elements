@@ -7,9 +7,18 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type       | Default     |
-| -------- | --------- | ----------- | ---------- | ----------- |
-| `items`  | --        |             | `Object[]` | `undefined` |
+| Property     | Attribute     | Description | Type       | Default     |
+| ------------ | ------------- | ----------- | ---------- | ----------- |
+| `data`       | --            |             | `Object`   | `undefined` |
+| `followHref` | `follow-href` |             | `boolean`  | `undefined` |
+| `items`      | --            |             | `Object[]` | `undefined` |
+
+
+## Events
+
+| Event      | Description | Type               |
+| ---------- | ----------- | ------------------ |
+| `navigate` |             | `CustomEvent<any>` |
 
 
 ## Dependencies

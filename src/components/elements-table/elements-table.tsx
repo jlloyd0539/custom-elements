@@ -7,8 +7,7 @@ import { Component, h, Prop, EventEmitter, Event } from '@stencil/core';
 export class ElementsTable {
 
   @Prop() items: Array<Object>
-  @Prop() followHref: boolean
-  @Prop() data: Object
+  @Prop() followHref: boolean = true
 
   @Event({
     eventName: 'navigate',
@@ -17,11 +16,10 @@ export class ElementsTable {
     bubbles: true,
   }) navigate: EventEmitter
 
-  handleClick(e) {
-    e.stopPropagation()
+  handleClick(e, item) {
     if (!this.followHref) e.preventDefault()
 
-    this.navigate.emit(this.data)
+    this.navigate.emit({url: item.url})
   }
 
 
@@ -47,7 +45,7 @@ export class ElementsTable {
               <td>
                 <a
                   href={item['url']}
-                  onClick={e => this.handleClick(e)}
+                  onClick={e => this.handleClick(e, item)}
                 >
                   {item['url']}
                 </a>

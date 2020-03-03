@@ -22,7 +22,7 @@ export class ElementsShell {
     return (
       <div>
         <h1>Hello World</h1>
-        <custom-elements-table items={this.tableItems} follow-href="false"></custom-elements-table>
+        <custom-elements-table items={this.tableItems}></custom-elements-table>
       </div>
     );
   }

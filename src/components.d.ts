@@ -12,6 +12,8 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface CustomElementsShell {}
   interface CustomElementsTable {
+    'data': Object;
+    'followHref': boolean;
     'items': Array<Object>;
   }
 }
@@ -39,7 +41,10 @@ declare global {
 declare namespace LocalJSX {
   interface CustomElementsShell {}
   interface CustomElementsTable {
+    'data'?: Object;
+    'followHref'?: boolean;
     'items'?: Array<Object>;
+    'onNavigate'?: (event: CustomEvent<any>) => void;
   }
 
   interface IntrinsicElements {

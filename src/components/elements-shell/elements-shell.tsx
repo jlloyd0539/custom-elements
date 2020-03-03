@@ -1,8 +1,7 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'custom-elements-shell',
-  shadow: true
+  tag: 'custom-elements-shell'
 })
 export class ElementsShell {
 
@@ -23,7 +22,7 @@ export class ElementsShell {
     return (
       <div>
         <h1>Hello World</h1>
-        <custom-elements-table items={this.tableItems}></custom-elements-table>
+        <custom-elements-table items={this.tableItems} follow-href="false"></custom-elements-table>
       </div>
     );
   }
